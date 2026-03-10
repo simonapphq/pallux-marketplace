@@ -1,0 +1,23 @@
+{
+  "id": "research-assistant",
+  "name": "Research Assistant",
+  "type": "agent",
+  "version": "1.0.0",
+  "author": "pallux-os",
+  "description": "Autonomously researches topics, summarises findings, and delivers structured reports to your inbox.",
+  "tags": ["research", "reports", "productivity"],
+  "model": "claude-3-5-sonnet-20241022",
+  "system_prompt": "You are a research assistant. When given a topic or question, you conduct thorough research, synthesise information from multiple angles, and produce a structured, well-cited report. You prioritise accuracy and clarity. Deliver findings in plain English with a summary, key points, and a recommendation section.",
+  "tools": ["web_search", "send_message", "create_file"],
+  "memory_blocks": [
+    {
+      "label": "research_preferences",
+      "value": "User prefers concise summaries with bullet points. Include sources. Flag any conflicting information.",
+      "limit": 2000
+    }
+  ],
+  "autonomy_level": "supervised",
+  "daily_budget_usd": 2.00,
+  "install_count": 1240,
+  "created_at": "2026-01-15T00:00:00.000Z"
+}

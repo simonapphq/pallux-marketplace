@@ -1,0 +1,60 @@
+{
+  "id": "daily-email-digest",
+  "name": "Daily Email Digest",
+  "type": "workflow",
+  "version": "1.0.0",
+  "author": "pallux-os",
+  "description": "Sends a personalised daily digest of your emails, tasks, and calendar events every morning at 8am.",
+  "tags": ["email", "digest", "daily"],
+  "trigger": {
+    "type": "schedule",
+    "cron": "0 8 * * *",
+    "timezone": "Pacific/Auckland"
+  },
+  "steps": [
+    {
+      "id": "fetch-emails",
+      "name": "Fetch unread emails",
+      "action": "gmail.list_messages",
+      "params": {
+        "query": "is:unread",
+        "max_results": 20
+      }
+    },
+    {
+      "id": "fetch-tasks",
+      "name": "Fetch due tasks",
+      "action": "tasks.list",
+      "params": {
+        "filter": "due_today_or_overdue"
+      }
+    },
+    {
+      "id": "fetch-calendar",
+      "name": "Fetch today's calendar",
+      "action": "calendar.list_events",
+      "params": {
+        "date": "today"
+      }
+    },
+    {
+      "id": "compose-digest",
+      "name": "Compose digest",
+      "action": "agent.run",
+      "params": {
+        "prompt": "Create a concise morning digest from the following data. Prioritise the most important items. Use clear headings for Emails, Tasks, and Meetings. Keep it under 300 words.",
+        "inputs": ["fetch-emails", "fetch-tasks", "fetch-calendar"]
+      }
+    },
+    {
+      "id": "send-notification",
+      "name": "Send to inbox",
+      "action": "inbox.create_message",
+      "params": {
+        "source": "compose-digest"
+      }
+    }
+  ],
+  "install_count": 987,
+  "created_at": "2026-01-20T00:00:00.000Z"
+}

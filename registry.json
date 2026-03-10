@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-03-11T00:00:00.000Z",
+  "packages": [
+    {
+      "id": "research-assistant",
+      "name": "Research Assistant",
+      "type": "agent",
+      "description": "Autonomously researches topics, summarises findings, and delivers structured reports to your inbox.",
+      "author": "pallux-os",
+      "version": "1.0.0",
+      "installs": 1240,
+      "popular": true,
+      "tags": ["research", "reports", "productivity"],
+      "install_url": "https://raw.githubusercontent.com/simonapphq/pallux-marketplace/main/packages/agents/research-assistant.json",
+      "created_at": "2026-01-15T00:00:00.000Z"
+    },
+    {
+      "id": "daily-email-digest",
+      "name": "Daily Email Digest",
+      "type": "workflow",
+      "description": "Sends a personalised daily digest of your emails, tasks, and calendar events every morning at 8am.",
+      "author": "pallux-os",
+      "version": "1.0.0",
+      "installs": 987,
+      "popular": true,
+      "tags": ["email", "digest", "daily"],
+      "install_url": "https://raw.githubusercontent.com/simonapphq/pallux-marketplace/main/packages/workflows/daily-email-digest.json",
+      "created_at": "2026-01-20T00:00:00.000Z"
+    },
+    {
+      "id": "code-reviewer",
+      "name": "Code Reviewer",
+      "type": "agent",
+      "description": "Reviews pull requests for bugs, style issues, and security vulnerabilities with inline suggestions.",
+      "author": "pallux-os",
+      "version": "1.0.0",
+      "installs": 543,
+      "popular": true,
+      "tags": ["code", "review", "git"],
+      "install_url": "https://raw.githubusercontent.com/simonapphq/pallux-marketplace/main/packages/agents/code-reviewer.json",
+      "created_at": "2026-02-01T00:00:00.000Z"
+    },
+    {
+      "id": "meeting-prep",
+      "name": "Meeting Prep",
+      "type": "workflow",
+      "description": "Automatically researches attendees, summarises relevant context, and prepares talking points before each calendar meeting.",
+      "author": "pallux-os",
+      "version": "1.0.0",
+      "installs": 412,
+      "popular": false,
+      "tags": ["meetings", "calendar", "preparation"],
+      "install_url": "https://raw.githubusercontent.com/simonapphq/pallux-marketplace/main/packages/workflows/meeting-prep.json",
+      "created_at": "2026-02-10T00:00:00.000Z"
+    },
+    {
+      "id": "data-analyst",
+      "name": "Data Analyst",
+      "type": "agent",
+      "description": "Connects to your databases, runs queries, and produces weekly performance dashboards in plain English.",
+      "author": "pallux-os",
+      "version": "1.0.0",
+      "installs": 612,
+      "popular": false,
+      "tags": ["data", "analytics", "sql"],
+      "install_url": "https://raw.githubusercontent.com/simonapphq/pallux-marketplace/main/packages/agents/data-analyst.json",
+      "created_at": "2026-02-15T00:00:00.000Z"
+    }
+  ]
+}
