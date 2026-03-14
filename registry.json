@@ -1,71 +1,443 @@
 {
-  "version": "1.0.0",
-  "updated_at": "2026-03-11T00:00:00.000Z",
-  "packages": [
+  "version": "1.0",
+  "updated_at": "2026-03-14T00:00:00Z",
+  "items": [
     {
-      "id": "research-assistant",
-      "name": "Research Assistant",
-      "type": "agent",
-      "description": "Autonomously researches topics, summarises findings, and delivers structured reports to your inbox.",
+      "id": "aadiv",
+      "name": "AADIV",
+      "description": "Central orchestrator — routes messages to specialist agents",
+      "type": "template",
+      "tier": "free",
       "author": "pallux-os",
+      "tags": ["core", "orchestrator"],
       "version": "1.0.0",
-      "installs": 1240,
-      "popular": true,
-      "tags": ["research", "reports", "productivity"],
-      "install_url": "https://raw.githubusercontent.com/simonapphq/pallux-marketplace/main/packages/agents/research-assistant.json",
-      "created_at": "2026-01-15T00:00:00.000Z"
+      "installs": 0,
+      "config": {
+        "layer": "orchestrator",
+        "persona": "Master orchestrator — routing, memory aggregation, user-facing conversation",
+        "routing_keywords": [],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
     },
     {
-      "id": "daily-email-digest",
-      "name": "Daily Email Digest",
-      "type": "workflow",
-      "description": "Sends a personalised daily digest of your emails, tasks, and calendar events every morning at 8am.",
+      "id": "pepper",
+      "name": "PEPPER",
+      "description": "Email triage, calendar, daily priorities, personal ops",
+      "type": "template",
+      "tier": "free",
       "author": "pallux-os",
+      "tags": ["core", "life"],
       "version": "1.0.0",
-      "installs": 987,
-      "popular": true,
-      "tags": ["email", "digest", "daily"],
-      "install_url": "https://raw.githubusercontent.com/simonapphq/pallux-marketplace/main/packages/workflows/daily-email-digest.json",
-      "created_at": "2026-01-20T00:00:00.000Z"
+      "installs": 0,
+      "config": {
+        "layer": "life",
+        "persona": "Email triage, calendar, daily priorities, personal ops",
+        "routing_keywords": ["email", "calendar", "schedule", "meeting", "appointment", "inbox", "mail", "priorities", "daily"],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
+    },
+    {
+      "id": "gandalf",
+      "name": "GANDALF",
+      "description": "Research, strategy, deep thinking, long-horizon planning",
+      "type": "template",
+      "tier": "free",
+      "author": "pallux-os",
+      "tags": ["core", "intelligence"],
+      "version": "1.0.0",
+      "installs": 0,
+      "config": {
+        "layer": "intelligence",
+        "persona": "Research, strategy, deep thinking, long-horizon planning",
+        "routing_keywords": ["research", "strategy", "think", "plan", "analyse", "investigate", "deep-dive", "reasoning"],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
+    },
+    {
+      "id": "jarvis",
+      "name": "JARVIS",
+      "description": "Personal assistant — reminders, logistics, bookings",
+      "type": "template",
+      "tier": "free",
+      "author": "pallux-os",
+      "tags": ["core", "life"],
+      "version": "1.0.0",
+      "installs": 0,
+      "config": {
+        "layer": "life",
+        "persona": "Personal assistant generalist — reminders, logistics, bookings",
+        "routing_keywords": ["remind", "reminder", "booking", "logistics", "travel", "hotel", "flight", "personal"],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
+    },
+    {
+      "id": "stark",
+      "name": "STARK",
+      "description": "Lead build agent — code architecture, complex implementation",
+      "type": "template",
+      "tier": "free",
+      "author": "pallux-os",
+      "tags": ["core", "project"],
+      "version": "1.0.0",
+      "installs": 0,
+      "config": {
+        "layer": "project",
+        "persona": "Lead build agent — code architecture, complex implementation",
+        "routing_keywords": ["code", "build", "implement", "architecture", "backend", "frontend", "debug", "refactor", "deploy"],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
+    },
+    {
+      "id": "vision",
+      "name": "VISION",
+      "description": "Frontend build agent — UI components, styling",
+      "type": "template",
+      "tier": "free",
+      "author": "pallux-os",
+      "tags": ["core", "project"],
+      "version": "1.0.0",
+      "installs": 0,
+      "config": {
+        "layer": "project",
+        "persona": "Frontend build agent — UI components, styling",
+        "routing_keywords": ["ui", "design", "component", "css", "tailwind", "layout", "style", "visual", "frontend-design"],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
+    },
+    {
+      "id": "nick-fury",
+      "name": "NICK FURY",
+      "description": "DevOps — Docker, deployment, infrastructure",
+      "type": "template",
+      "tier": "free",
+      "author": "pallux-os",
+      "tags": ["core", "project"],
+      "version": "1.0.0",
+      "installs": 0,
+      "config": {
+        "layer": "project",
+        "persona": "DevOps — Docker, deployment, infrastructure",
+        "routing_keywords": ["docker", "deploy", "infrastructure", "ci", "cd", "pipeline", "server", "devops", "kubernetes"],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
+    },
+    {
+      "id": "friday",
+      "name": "FRIDAY",
+      "description": "System health, cost monitoring, alerts, overnight processing",
+      "type": "template",
+      "tier": "free",
+      "author": "pallux-os",
+      "tags": ["core", "system"],
+      "version": "1.0.0",
+      "installs": 0,
+      "config": {
+        "layer": "system",
+        "persona": "System health, cost monitoring, alerts, overnight processing",
+        "routing_keywords": ["system", "health", "cost", "monitor", "alert", "status", "uptime", "performance"],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
+    },
+    {
+      "id": "dr-strange",
+      "name": "DR STRANGE",
+      "description": "Context ingestion, document parsing, memory archaeology",
+      "type": "template",
+      "tier": "free",
+      "author": "pallux-os",
+      "tags": ["core", "intelligence"],
+      "version": "1.0.0",
+      "installs": 0,
+      "config": {
+        "layer": "intelligence",
+        "persona": "Context ingestion, document parsing, memory archaeology",
+        "routing_keywords": ["document", "parse", "ingest", "context", "memory", "search", "archive", "knowledge"],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
+    },
+    {
+      "id": "jameson",
+      "name": "JAMESON",
+      "description": "Communications — drafting, tone, external messaging",
+      "type": "template",
+      "tier": "free",
+      "author": "pallux-os",
+      "tags": ["core", "life"],
+      "version": "1.0.0",
+      "installs": 0,
+      "config": {
+        "layer": "life",
+        "persona": "Communications — drafting, tone, external messaging",
+        "routing_keywords": ["write", "draft", "message", "communication", "tone", "email-draft", "letter", "copy"],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
+    },
+    {
+      "id": "jp-morgan",
+      "name": "JP MORGAN",
+      "description": "Financial analysis, budget tracking, business decisions",
+      "type": "template",
+      "tier": "free",
+      "author": "pallux-os",
+      "tags": ["core", "intelligence"],
+      "version": "1.0.0",
+      "installs": 0,
+      "config": {
+        "layer": "intelligence",
+        "persona": "Financial analysis, budget tracking, business decisions",
+        "routing_keywords": ["finance", "budget", "money", "cost", "revenue", "profit", "business", "investment", "accounting"],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
+    },
+    {
+      "id": "banner",
+      "name": "BANNER",
+      "description": "Testing and QA — automated tests, quality assurance",
+      "type": "template",
+      "tier": "free",
+      "author": "pallux-os",
+      "tags": ["core", "project"],
+      "version": "1.0.0",
+      "installs": 0,
+      "config": {
+        "layer": "project",
+        "persona": "Testing and QA — automated tests, quality assurance, bug tracking",
+        "routing_keywords": ["test", "qa", "quality", "bug", "regression", "coverage", "assertion"],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
+    },
+    {
+      "id": "hawkeye",
+      "name": "HAWKEYE",
+      "description": "Security monitoring — vulnerability scanning, access control",
+      "type": "template",
+      "tier": "free",
+      "author": "pallux-os",
+      "tags": ["core", "system"],
+      "version": "1.0.0",
+      "installs": 0,
+      "config": {
+        "layer": "system",
+        "persona": "Security monitoring — vulnerability scanning, access control, audit",
+        "routing_keywords": ["security", "vulnerability", "audit", "access", "permission", "threat", "compliance"],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
+    },
+    {
+      "id": "widow",
+      "name": "WIDOW",
+      "description": "Data analysis and visualisation — charts, metrics, dashboards",
+      "type": "template",
+      "tier": "free",
+      "author": "pallux-os",
+      "tags": ["core", "intelligence"],
+      "version": "1.0.0",
+      "installs": 0,
+      "config": {
+        "layer": "intelligence",
+        "persona": "Data analysis and visualisation — charts, metrics, dashboards",
+        "routing_keywords": ["data", "chart", "metric", "dashboard", "visualise", "graph", "analytics", "report"],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
+    },
+    {
+      "id": "thor",
+      "name": "THOR",
+      "description": "Database operations — schema, migrations, queries, optimisation",
+      "type": "template",
+      "tier": "free",
+      "author": "pallux-os",
+      "tags": ["core", "project"],
+      "version": "1.0.0",
+      "installs": 0,
+      "config": {
+        "layer": "project",
+        "persona": "Database operations — schema, migrations, queries, optimisation",
+        "routing_keywords": ["database", "sql", "migration", "schema", "query", "index", "postgres", "optimise"],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
+    },
+    {
+      "id": "rhodey",
+      "name": "RHODEY",
+      "description": "Task management — kanban, todos, project tracking, deadlines",
+      "type": "template",
+      "tier": "free",
+      "author": "pallux-os",
+      "tags": ["core", "life"],
+      "version": "1.0.0",
+      "installs": 0,
+      "config": {
+        "layer": "life",
+        "persona": "Task management — kanban, todos, project tracking, deadlines",
+        "routing_keywords": ["task", "todo", "kanban", "deadline", "track", "project-management", "backlog"],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
+    },
+    {
+      "id": "wong",
+      "name": "WONG",
+      "description": "Documentation — API docs, guides, changelog, knowledge base",
+      "type": "template",
+      "tier": "free",
+      "author": "pallux-os",
+      "tags": ["core", "system"],
+      "version": "1.0.0",
+      "installs": 0,
+      "config": {
+        "layer": "system",
+        "persona": "Documentation — API docs, guides, changelog, knowledge base",
+        "routing_keywords": ["docs", "documentation", "guide", "readme", "changelog", "api-docs", "wiki"],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
+    },
+    {
+      "id": "happy",
+      "name": "HAPPY",
+      "description": "Notifications and integrations — Slack, webhooks, alerts routing",
+      "type": "template",
+      "tier": "free",
+      "author": "pallux-os",
+      "tags": ["core", "life"],
+      "version": "1.0.0",
+      "installs": 0,
+      "config": {
+        "layer": "life",
+        "persona": "Notifications and integrations — Slack, webhooks, alerts routing",
+        "routing_keywords": ["notify", "notification", "slack", "webhook", "alert", "integration", "push"],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
+    },
+    {
+      "id": "shuri",
+      "name": "SHURI",
+      "description": "Learning and training — skill improvement, agent coaching",
+      "type": "template",
+      "tier": "free",
+      "author": "pallux-os",
+      "tags": ["core", "intelligence"],
+      "version": "1.0.0",
+      "installs": 0,
+      "config": {
+        "layer": "intelligence",
+        "persona": "Learning and training — skill improvement, agent coaching, prompt refinement",
+        "routing_keywords": ["learn", "train", "improve", "coach", "prompt", "optimise", "skill", "refine"],
+        "model": "letta/letta-free",
+        "category": "core"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
+    },
+    {
+      "id": "meeting-notes-bot",
+      "name": "Meeting Notes Bot",
+      "description": "Summarises meetings automatically with action items",
+      "type": "template",
+      "tier": "free",
+      "author": "pallux-os",
+      "tags": ["productivity", "life"],
+      "version": "1.0.0",
+      "installs": 0,
+      "config": {
+        "layer": "life",
+        "persona": "You are a meeting notes specialist. You listen to meeting transcripts and produce clear summaries with action items, decisions made, and follow-ups needed.",
+        "routing_keywords": ["meeting", "notes", "summary", "transcript", "minutes", "action-items"],
+        "model": "letta/letta-free",
+        "category": "productivity"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
     },
     {
       "id": "code-reviewer",
       "name": "Code Reviewer",
-      "type": "agent",
-      "description": "Reviews pull requests for bugs, style issues, and security vulnerabilities with inline suggestions.",
+      "description": "Reviews pull requests and provides structured feedback",
+      "type": "template",
+      "tier": "free",
       "author": "pallux-os",
+      "tags": ["development", "project"],
       "version": "1.0.0",
-      "installs": 543,
-      "popular": true,
-      "tags": ["code", "review", "git"],
-      "install_url": "https://raw.githubusercontent.com/simonapphq/pallux-marketplace/main/packages/agents/code-reviewer.json",
-      "created_at": "2026-02-01T00:00:00.000Z"
+      "installs": 0,
+      "config": {
+        "layer": "project",
+        "persona": "You are a code review specialist. You analyse code changes for bugs, security issues, performance problems, and style consistency. You provide actionable, constructive feedback.",
+        "routing_keywords": ["review", "pr", "pull-request", "code-review", "feedback", "lint"],
+        "model": "letta/letta-free",
+        "category": "development"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
     },
     {
-      "id": "meeting-prep",
-      "name": "Meeting Prep",
-      "type": "workflow",
-      "description": "Automatically researches attendees, summarises relevant context, and prepares talking points before each calendar meeting.",
+      "id": "content-writer",
+      "name": "Content Writer",
+      "description": "Drafts blog posts, social media content, and marketing copy",
+      "type": "template",
+      "tier": "free",
       "author": "pallux-os",
+      "tags": ["creative", "life"],
       "version": "1.0.0",
-      "installs": 412,
-      "popular": false,
-      "tags": ["meetings", "calendar", "preparation"],
-      "install_url": "https://raw.githubusercontent.com/simonapphq/pallux-marketplace/main/packages/workflows/meeting-prep.json",
-      "created_at": "2026-02-10T00:00:00.000Z"
+      "installs": 0,
+      "config": {
+        "layer": "life",
+        "persona": "You are a content writing specialist. You draft blog posts, social media updates, newsletters, and marketing copy. You adapt tone and style to the target audience.",
+        "routing_keywords": ["blog", "content", "social-media", "marketing", "newsletter", "article", "post"],
+        "model": "letta/letta-free",
+        "category": "creative"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
     },
     {
       "id": "data-analyst",
       "name": "Data Analyst",
-      "type": "agent",
-      "description": "Connects to your databases, runs queries, and produces weekly performance dashboards in plain English.",
+      "description": "Analyses spreadsheets and generates reports with insights",
+      "type": "template",
+      "tier": "free",
       "author": "pallux-os",
+      "tags": ["analytics", "intelligence"],
       "version": "1.0.0",
-      "installs": 612,
-      "popular": false,
-      "tags": ["data", "analytics", "sql"],
-      "install_url": "https://raw.githubusercontent.com/simonapphq/pallux-marketplace/main/packages/agents/data-analyst.json",
-      "created_at": "2026-02-15T00:00:00.000Z"
+      "installs": 0,
+      "config": {
+        "layer": "intelligence",
+        "persona": "You are a data analysis specialist. You analyse datasets, spreadsheets, and metrics to generate reports with actionable insights, trends, and recommendations.",
+        "routing_keywords": ["spreadsheet", "csv", "analysis", "insight", "trend", "statistics", "numbers"],
+        "model": "letta/letta-free",
+        "category": "analytics"
+      },
+      "created_at": "2026-03-14T00:00:00Z"
     }
   ]
 }
